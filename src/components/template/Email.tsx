@@ -91,9 +91,9 @@ export function EmailTemplate({
             <Text style={label}>💬 Message:</Text>
             <pre style={codeBlock}>{userMessage}</pre>
 
-            <Text style={text}>
-              I’ll respond as soon as possible. Looking forward to connecting with you!
-            </Text>
+           <Text>
+            I&apos;ll respond as soon as possible
+           </Text>
 
             {/* SOCIALS */}
             <Section style={socialSection}>
