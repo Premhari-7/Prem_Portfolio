@@ -30,4 +30,12 @@ export const projectsData = [
     github_link: "https://github.com/Premhari-7/plant-disease-analyzer-ai",
     tech: ["Python", "Machine Learning", "AI", "Groq API"],
   },
+
+  {
+  title: "Personal Portfolio",
+  description: "A modern full-stack developer portfolio showcasing my projects, skills, and resume with a clean and responsive UI.",
+  tech: ["Next.js", "React", "Tailwind CSS"],
+  github: "https://github.com/Premhari-7/Prem_Portfolio",
+  live: "https://prem-portfolio-i3wr.vercel.app",
+},
 ];

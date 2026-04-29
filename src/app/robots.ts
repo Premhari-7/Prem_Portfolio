@@ -1,6 +1,10 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://prem-portfolio-i3wr.vercel.app";
+
   return {
     rules: [
       {
@@ -9,6 +13,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api", "/private"],
       },
     ],
-    sitemap: "http://localhost:3000/sitemap.xml", // temporary
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

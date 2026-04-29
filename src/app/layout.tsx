@@ -24,12 +24,14 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Prem Hari S",
-      url: "http://localhost:3000",
+      url: "https://prem-portfolio-i3wr.vercel.app",
     },
   ],
   creator: "Prem Hari S",
   keywords: Keywords,
-  metadataBase: new URL("http://localhost:3000"),
+
+  // ✅ FIXED HERE
+  metadataBase: new URL("https://prem-portfolio-i3wr.vercel.app"),
 };
 
 export default function RootLayout({

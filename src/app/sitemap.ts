@@ -2,7 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    "https://prem-portfolio-i3wr.vercel.app";
 
   const lastModified = new Date();
 
@@ -31,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/resume.pdf`, // ✅ fixed
+      url: `${baseUrl}/docs/resume.pdf`,
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.6,

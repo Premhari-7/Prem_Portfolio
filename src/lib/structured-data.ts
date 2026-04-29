@@ -1,5 +1,9 @@
 import { selfData, skillsData } from "@/constant";
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  "https://prem-portfolio-i3wr.vercel.app";
+
 export function generatePersonStructuredData() {
   const skills = skillsData.flatMap((category) =>
     category.data.map((skill) => skill.title)
@@ -32,7 +36,7 @@ export function generatePersonStructuredData() {
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
       `https://instagram.com/${selfData.socials_username.instagram}`,
     ],
-    url: "http://localhost:3000", // change after deploy
+    url: baseUrl,
     description: selfData.bio,
     knowsAbout: skills,
   };
@@ -43,7 +47,7 @@ export function generateWebsiteStructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Prem Hari S - Portfolio",
-    url: "http://localhost:3000",
+    url: baseUrl,
     description:
       "Portfolio of Prem Hari S showcasing MERN stack projects and full-stack development work",
     author: {
@@ -68,8 +72,8 @@ export function generateOrganizationStructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: selfData.name,
-    url: "http://localhost:3000",
-    logo: "/images/logo.png",
+    url: baseUrl,
+    logo: `${baseUrl}/images/logo.png`,
     description: selfData.bio,
     founder: {
       "@type": "Person",
@@ -90,7 +94,7 @@ export function generateResumeStructuredData() {
     name: "Prem Hari S Resume",
     description:
       "Professional resume of Prem Hari S - Full Stack Developer specializing in MERN stack",
-    url: "http://localhost:3000/resume",
+    url: `${baseUrl}/resume`,
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -113,8 +117,8 @@ export function generateResumeStructuredData() {
     },
     dateModified: new Date().toISOString(),
     fileFormat: "application/pdf",
-    contentUrl: "http://localhost:3000/docs/resume.pdf",
-    downloadUrl: "http://localhost:3000/docs/resume.pdf",
+    contentUrl: `${baseUrl}/docs/resume.pdf`,
+    downloadUrl: `${baseUrl}/docs/resume.pdf`,
     keywords: [
       "Full Stack Developer",
       "MERN Stack Developer",
