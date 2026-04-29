@@ -1,106 +1,41 @@
-import { useRouter, usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { FaHouse, FaArrowLeft } from "react-icons/fa6";
-
 import { Navbar, Footer } from "@/components/common";
-import { Button } from "@/components/ui/button";
-import { quentine, nasalization } from "@/app/fonts";
 
 export default function NotFound() {
-  const router = useRouter();
-  const pathname = usePathname();
-
   return (
-    <div className="min-h-screen relative flex flex-col">
+    <div className="min-h-screen flex flex-col">
 
       <Navbar />
 
-      <main className="flex-1 flex items-center justify-center px-6 py-16">
-        <div className="max-w-4xl mx-auto w-full text-center">
-          <motion.div
-            className="space-y-12"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
+      <main className="flex-1 flex items-center justify-center px-6">
+        <div className="text-center space-y-6">
 
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+          <h1 className="text-7xl font-bold text-primary">404</h1>
+
+          <h2 className="text-3xl font-semibold">
+            Page Not Found
+          </h2>
+
+          <p className="text-muted-foreground max-w-md mx-auto">
+            The page you are looking for doesn&apos;t exist or was moved.
+          </p>
+
+          <div className="flex gap-4 justify-center mt-6">
+            <Link
+              href="/"
+              className="px-6 py-2 bg-primary text-white rounded-lg hover:opacity-90"
             >
-              <h1 className={`${quentine.className} text-7xl md:text-9xl lg:text-[10rem] font-bold text-primary leading-none`}>
-                404
-              </h1>
+              Go Home
+            </Link>
 
-              <h2 className={`${nasalization.className} text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground`}>
-                Page Not Found
-              </h2>
-            </motion.div>
-
-            <motion.div
-              className="space-y-6 max-w-2xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+            <Link
+              href="/#projects"
+              className="px-6 py-2 border rounded-lg hover:bg-muted"
             >
-              <p className="text-xs md:text-xl text-primary-foreground/80 leading-relaxed">
-                Oops! The page you&apos;re looking for seems to have wandered into the void.
-              </p>
+              View Projects
+            </Link>
+          </div>
 
-              <div className="bg-card/20 backdrop-blur-sm border border-primary/20 rounded-xl p-6">
-                <p className="text-base text-primary-foreground/70">Requested URL:</p>
-                <code className="mt-2 inline-block px-4 py-2 bg-primary/20 rounded-lg text-primary font-mono text-sm break-all">
-                  {pathname}
-                </code>
-              </div>
-
-              <p className="text-base text-primary-foreground/60">
-                The page might have been moved, deleted, or the URL is incorrect.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Button onClick={() => router.push("/")} size="lg" className="min-w-[180px] h-12 text-lg">
-                <FaHouse className="w-5 h-5 mr-3" />
-                Go Home
-              </Button>
-
-              <Button onClick={() => router.back()} variant="outline" size="lg" className="min-w-[180px] h-12 text-lg">
-                <FaArrowLeft className="w-5 h-5 mr-3" />
-                Go Back
-              </Button>
-            </motion.div>
-
-            <motion.div className="pt-8">
-              <p className="text-base text-primary-foreground/60 mb-6">
-                Or explore:
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-6 text-base">
-                {[
-                  { href: "/#about", label: "About" },
-                  { href: "/#projects", label: "Projects" },
-                  { href: "/#skills", label: "Skills" },
-                  { href: "/#experience", label: "Experience" },
-                  { href: "/resume", label: "Resume" },
-                  { href: "/#contact", label: "Contact" },
-                ].map((link) => (
-                  <Link key={link.href} href={link.href} className="text-primary hover:underline">
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            </motion.div>
-
-          </motion.div>
         </div>
       </main>
 
