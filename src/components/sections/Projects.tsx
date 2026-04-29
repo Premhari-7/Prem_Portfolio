@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 import { nasalization } from "@/app/fonts";
-
 import { ProjectCard } from "../Cards";
 import { projectsData } from "@/constant/";
 
@@ -12,43 +11,39 @@ export const Projects = () => {
   const ref = useRef(null);
 
   const isInView = useInView(ref, {
-    once: false,
-    margin: "-80px",
-    amount: 0.1,
+    once: true,
   });
 
   return (
     <section
       ref={ref}
       id="projects"
-      className="py-24 max-w-6xl mx-auto relative overflow-hidden"
+      className="relative w-full max-w-6xl mx-auto px-4 py-32"
     >
-      <div className="mx-auto px-4 lg:px-8 relative">
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+      {/* 🔥 FIXED TITLE (FORCE ABOVE BACKGROUND) */}
+      <div className="relative z-[999] text-center mb-16">
+        <h2
+          className={`${nasalization.className} text-5xl md:text-6xl font-bold text-white`}
         >
-          <motion.h2
-            className={`${nasalization.className} text-4xl md:text-5xl font-bold text-white`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            My Projects
-          </motion.h2>
-        </motion.div>
+          My Projects
+        </h2>
+      </div>
 
-        <motion.div
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          {projectsData.map((proj, index) => (
+      {/* 🔥 PROJECT GRID */}
+      <motion.div
+        className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 relative z-10"
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.6 }}
+      >
+        {projectsData.map((proj, index) => (
+          <motion.div
+            key={`${proj.name}-${index}`}
+            initial={{ opacity: 0, y: 40 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: index * 0.1 }}
+          >
             <ProjectCard
-              key={`${proj.name}-${index}`}   // ✅ FIXED KEY ERROR
               index={index}
               title={proj.name}
               desc={proj.description}
@@ -56,9 +51,9 @@ export const Projects = () => {
               demo={proj.demo}
               tech={proj.tech}
             />
-          ))}
-        </motion.div>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };
