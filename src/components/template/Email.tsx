@@ -1,3 +1,25 @@
+import * as React from "react";
+import {
+  Html,
+  Head,
+  Body,
+  Container,
+  Section,
+  Text,
+  Img,
+  Link,
+  Row,
+  Column,
+} from "@react-email/components";
+
+import { selfData } from "@/constant";
+
+interface EmailTemplateProps {
+  userName: string;
+  contactReason: string;
+  userMessage: string;
+}
+
 export function EmailTemplate({
   userName,
   contactReason,
@@ -24,11 +46,7 @@ export function EmailTemplate({
       url: `https://instagram.com/${selfData.socials_username.instagram}`,
       icon: "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
     },
-    {
-      name: "X",
-      url: `https://x.com/${selfData.socials_username.twitter}`,
-      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968830.png",
-    },
+    // ❌ Twitter removed (you said you don’t want it)
   ];
 
   return (
@@ -36,22 +54,24 @@ export function EmailTemplate({
       <Head />
       <Body style={main}>
         <Container style={container}>
+          {/* HEADER */}
           <Section style={header}>
             <Row>
               <Column style={{ width: "40px" }}>
                 <Img
-                  src="/images/logo.png"   // ✅ use your local logo
+                  src="https://your-domain.vercel.app/images/logo.png"
                   alt="PH"
                   width="40"
                   height="40"
                 />
               </Column>
               <Column>
-                <Text style={brandText}>Prem Hari S</Text>  {/* ✅ your name */}
+                <Text style={brandText}>Prem Hari S</Text>
               </Column>
             </Row>
           </Section>
 
+          {/* BODY */}
           <Section>
             <Text style={heading}>Hey {userName}! 🚀</Text>
 
@@ -61,20 +81,21 @@ export function EmailTemplate({
             </Text>
 
             <Text style={text}>
-              Here&apos;s a quick recap of your message:
+              Here's a quick recap of your message:
             </Text>
 
             <Text style={label}>
-              📌 Reason to Contact: <strong>{contactReason}</strong>
+              📌 Reason: <strong>{contactReason}</strong>
             </Text>
 
             <Text style={label}>💬 Message:</Text>
             <pre style={codeBlock}>{userMessage}</pre>
 
             <Text style={text}>
-              I&apos;ll respond as soon as possible. Looking forward to connecting with you!
+              I’ll respond as soon as possible. Looking forward to connecting with you!
             </Text>
 
+            {/* SOCIALS */}
             <Section style={socialSection}>
               <table style={socialTable}>
                 <tbody>
@@ -98,7 +119,7 @@ export function EmailTemplate({
             </Section>
 
             <Text style={footerText}>
-              You&apos;re receiving this email because you contacted me via my portfolio.
+              You're receiving this email because you contacted me via my portfolio.
             </Text>
           </Section>
         </Container>
@@ -106,3 +127,71 @@ export function EmailTemplate({
     </Html>
   );
 }
+
+/* STYLES */
+const main = {
+  backgroundColor: "#0a0a0f",
+  padding: "20px",
+};
+
+const container = {
+  backgroundColor: "#111827",
+  padding: "20px",
+  borderRadius: "10px",
+};
+
+const header = {
+  marginBottom: "20px",
+};
+
+const brandText = {
+  fontSize: "18px",
+  color: "#ffffff",
+  fontWeight: "bold",
+};
+
+const heading = {
+  fontSize: "22px",
+  color: "#a855f7",
+  fontWeight: "bold",
+};
+
+const text = {
+  fontSize: "14px",
+  color: "#e5e7eb",
+  marginBottom: "10px",
+};
+
+const label = {
+  fontSize: "14px",
+  color: "#ffffff",
+};
+
+const codeBlock = {
+  backgroundColor: "#1f2937",
+  padding: "10px",
+  borderRadius: "6px",
+  color: "#d1d5db",
+};
+
+const socialSection = {
+  marginTop: "20px",
+};
+
+const socialTable = {
+  width: "100%",
+};
+
+const socialIconCol = {
+  padding: "5px",
+};
+
+const socialIcon = {
+  display: "block",
+};
+
+const footerText = {
+  fontSize: "12px",
+  color: "#9ca3af",
+  marginTop: "20px",
+};
