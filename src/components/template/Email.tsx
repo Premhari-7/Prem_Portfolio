@@ -1,25 +1,3 @@
-import React from "react";
-import {
-  Html,
-  Head,
-  Body,
-  Container,
-  Section,
-  Text,
-  Img,
-  Row,
-  Column,
-  Link,
-} from "@react-email/components";
-
-import { selfData } from "@/constant";
-
-interface EmailTemplateProps {
-  userName: string;
-  contactReason: string;
-  userMessage: string;
-}
-
 export function EmailTemplate({
   userName,
   contactReason,
@@ -62,29 +40,28 @@ export function EmailTemplate({
             <Row>
               <Column style={{ width: "40px" }}>
                 <Img
-                  src="https://raw.githubusercontent.com/aarabii/An/refs/heads/master/public/images/logo.png"
-                  alt="AN"
+                  src="/images/logo.png"   // ✅ use your local logo
+                  alt="PH"
                   width="40"
                   height="40"
                 />
               </Column>
               <Column>
-                <Text style={brandText}>Aarab Nishchal</Text>
+                <Text style={brandText}>Prem Hari S</Text>  {/* ✅ your name */}
               </Column>
             </Row>
           </Section>
 
           <Section>
             <Text style={heading}>Hey {userName}! 🚀</Text>
+
             <Text style={text}>
               Thanks a bunch for reaching out! 🎉 <br />
-              Your message just landed safely in my inbox, and I&apos;ve already
-              notified the caffeine team (aka me) to get on it ASAP.
+              Your message just landed safely in my inbox, and I’ll get back to you soon.
             </Text>
 
             <Text style={text}>
-              Here&apos;s a quick recap of what you sent, in case you forgot (or
-              your cat walked across the keyboard):
+              Here&apos;s a quick recap of your message:
             </Text>
 
             <Text style={label}>
@@ -95,8 +72,7 @@ export function EmailTemplate({
             <pre style={codeBlock}>{userMessage}</pre>
 
             <Text style={text}>
-              I&apos;ll get back to you soon probably sooner than your food
-              delivery app says &quot;just 10 more minutes.&quot; 🍕
+              I&apos;ll respond as soon as possible. Looking forward to connecting with you!
             </Text>
 
             <Section style={socialSection}>
@@ -122,9 +98,7 @@ export function EmailTemplate({
             </Section>
 
             <Text style={footerText}>
-              You&apos;re receiving this email because you contacted me via my
-              site. If that wasn&apos;t you... it might&apos;ve been your cat
-              again 🐾
+              You&apos;re receiving this email because you contacted me via my portfolio.
             </Text>
           </Section>
         </Container>
@@ -132,88 +106,3 @@ export function EmailTemplate({
     </Html>
   );
 }
-
-const main: React.CSSProperties = {
-  background: "radial-gradient(125% 125% at 50% 10%, #000 40%, #6633ee 100%)",
-  padding: "40px 20px",
-  fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
-  color: "#ffffff",
-  lineHeight: "1.5",
-};
-
-const container: React.CSSProperties = {
-  backgroundColor: "transparent",
-  maxWidth: "600px",
-  margin: "0 auto",
-};
-
-const header: React.CSSProperties = {
-  marginBottom: "30px",
-  alignItems: "center",
-};
-
-const brandText: React.CSSProperties = {
-  fontSize: "20px",
-  fontWeight: "bold",
-  marginLeft: "10px",
-  marginTop: "5px",
-};
-
-const heading: React.CSSProperties = {
-  fontSize: "24px",
-  fontWeight: "bold",
-  marginBottom: "15px",
-};
-
-const text: React.CSSProperties = {
-  fontSize: "16px",
-  marginBottom: "16px",
-};
-
-const label: React.CSSProperties = {
-  fontSize: "16px",
-  fontWeight: "bold",
-  marginTop: "20px",
-};
-
-const codeBlock: React.CSSProperties = {
-  backgroundColor: "rgba(255,255,255,0.1)",
-  padding: "16px",
-  borderRadius: "8px",
-  fontFamily: "monospace",
-  fontSize: "14px",
-  whiteSpace: "pre-wrap",
-  lineHeight: "1.4",
-  color: "#fff",
-  marginTop: "8px",
-};
-
-const socialSection: React.CSSProperties = {
-  marginTop: "30px",
-  padding: "20px",
-  textAlign: "center",
-  width: "100%",
-};
-
-const socialTable: React.CSSProperties = {
-  margin: "0 auto",
-  borderSpacing: "12px",
-  borderCollapse: "separate",
-};
-
-const socialIconCol: React.CSSProperties = {
-  backgroundColor: "rgba(255,255,255,0.08)",
-  padding: "8px",
-  borderRadius: "8px",
-  textAlign: "center",
-};
-
-const socialIcon: React.CSSProperties = {
-  borderRadius: "4px",
-};
-
-const footerText: React.CSSProperties = {
-  fontSize: "12px",
-  marginTop: "30px",
-  color: "#ccc",
-};

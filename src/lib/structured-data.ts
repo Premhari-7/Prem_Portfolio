@@ -18,7 +18,7 @@ export function generatePersonStructuredData() {
     },
     alumniOf: {
       "@type": "CollegeOrUniversity",
-      name: "KIIT University",
+      name: "Sri Krishna Arts and Science College",
     },
     email: selfData.email,
     address: {
@@ -30,10 +30,9 @@ export function generatePersonStructuredData() {
     sameAs: [
       `https://github.com/${selfData.socials_username.github}`,
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
-      `https://twitter.com/${selfData.socials_username.twitter}`,
       `https://instagram.com/${selfData.socials_username.instagram}`,
     ],
-    url: "https://aarab.vercel.app",
+    url: "http://localhost:3000", // change after deploy
     description: selfData.bio,
     knowsAbout: skills,
   };
@@ -43,10 +42,10 @@ export function generateWebsiteStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Aarab Nishchal - Portfolio",
-    url: "https://aarab.vercel.app",
+    name: "Prem Hari S - Portfolio",
+    url: "http://localhost:3000",
     description:
-      "Aarab Nishchal's portfolio featuring projects in React, Next.js, and modern web development",
+      "Portfolio of Prem Hari S showcasing MERN stack projects and full-stack development work",
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -69,8 +68,8 @@ export function generateOrganizationStructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: selfData.name,
-    url: "https://aarab.vercel.app",
-    logo: "https://aarab.vercel.app/images/logo.png",
+    url: "http://localhost:3000",
+    logo: "/images/logo.png",
     description: selfData.bio,
     founder: {
       "@type": "Person",
@@ -79,7 +78,6 @@ export function generateOrganizationStructuredData() {
     sameAs: [
       `https://github.com/${selfData.socials_username.github}`,
       `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
-      `https://twitter.com/${selfData.socials_username.twitter}`,
       `https://instagram.com/${selfData.socials_username.instagram}`,
     ],
   };
@@ -89,10 +87,10 @@ export function generateResumeStructuredData() {
   return {
     "@context": "https://schema.org",
     "@type": "DigitalDocument",
-    name: "Aarab Nishchal Resume",
+    name: "Prem Hari S Resume",
     description:
-      "Professional resume of Aarab Nishchal - Student Developer specializing in Full-Stack Web Development",
-    url: "https://aarab.vercel.app/resume",
+      "Professional resume of Prem Hari S - Full Stack Developer specializing in MERN stack",
+    url: "http://localhost:3000/resume",
     author: {
       "@type": "Person",
       name: selfData.name,
@@ -115,19 +113,16 @@ export function generateResumeStructuredData() {
     },
     dateModified: new Date().toISOString(),
     fileFormat: "application/pdf",
-    contentUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
-    downloadUrl: "https://aarab.vercel.app/docs/MyResume.pdf",
+    contentUrl: "http://localhost:3000/docs/resume.pdf",
+    downloadUrl: "http://localhost:3000/docs/resume.pdf",
     keywords: [
-      "Software Developer",
       "Full Stack Developer",
+      "MERN Stack Developer",
       "React Developer",
-      "Next.js Developer",
+      "Node.js Developer",
       "JavaScript Developer",
-      "TypeScript Developer",
       "Student Developer",
-      "Computer Science",
-      "KIIT University",
-      "Bhubaneswar",
+      "Coimbatore",
       "India",
     ],
   };

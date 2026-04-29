@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "aarab.vercel.app",
+        hostname: "your-domain.vercel.app", // 🔥 change after deploy
         port: "",
         pathname: "/**",
       },
@@ -38,7 +38,8 @@ const nextConfig: NextConfig = {
           },
           {
             key: "X-Robots-Tag",
-            value: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+            value:
+              "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
           },
         ],
       },
@@ -71,22 +72,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/email",
-        destination: "mailto:aarab.nishchal@gmail.com",
+        destination: "mailto:haripradeep185@gmail.com", // ✅ your email
         permanent: true,
       },
       {
         source: "/directresume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/resume.pdf", // ✅ fixed
         permanent: true,
       },
       {
         source: "/direct-resume",
-        destination: "/docs/Aarab_Nishchal_Resume.pdf",
+        destination: "/docs/resume.pdf", // ✅ fixed
         permanent: true,
       },
       {
         source: "/github",
-        destination: "www.github.com/aarabii",
+        destination: "https://github.com/Premhari-7", // ✅ your GitHub
         permanent: true,
       },
     ];

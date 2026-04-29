@@ -1,98 +1,63 @@
 const names = [
-  "Aarab Nishchal",
-  "Aarab Nishchal Portfolio",
-  "Aarabii",
-  "Aarab Nishchal KIIT",
-  "Aarab Nishchal Bhubaneswar",
+  "Prem Hari S",
+  "Prem Hari Portfolio",
+  "Prem Hari Developer",
+  "Prem Hari MERN Developer",
+  "Prem Hari Coimbatore",
 ];
 
 const roles = [
-  "Software Engineer",
   "Full Stack Developer",
-  "Next.js Developer",
-  "Frontend Engineer",
+  "MERN Stack Developer",
+  "Frontend Developer",
   "Backend Developer",
-  "Generative AI Engineer",
-  "Technical Content Engineer",
-  "Problem Setter",
-  "Student Developer",
-  "Creative Developer",
-  "UI/UX Engineer"
+  "Web Developer",
+  "UI UX Designer",
+  "Student Developer"
 ];
 
 const skills = [
-  // Web Frameworks & Libraries
-  "Next.js 15",
   "React.js",
-  "React Server Components",
+  "Next.js",
+  "JavaScript",
   "TypeScript",
+  "HTML",
+  "CSS",
   "Tailwind CSS",
-  "Framer Motion",
+  "Bootstrap",
   "Node.js",
   "Express.js",
-  "Redux Toolkit",
-  "Zustand",
-
-  // Database & Backend
-  "PostgreSQL",
-  "Supabase",
   "MongoDB",
-  "Prisma ORM",
-  "GraphQL",
-  "REST API",
-  "Serverless Functions",
-  "Edge Runtime",
-
-  // AI & Systems
-  "Machine Learning",
-  "LLM Integration",
-  "Ollama",
-  "RAG Pipelines",
-  "LangChain",
-  "Vector Databases",
-  "C++ Optimization",
-  "Python Automation",
-  "Docker",
-  "Kubernetes",
-  "CI/CD Pipelines",
-  "Git & GitHub"
+  "MySQL",
+  "PHP",
+  "Git",
+  "GitHub"
 ];
 
 const projects = [
-  "CppTestGenAI",
-  "Orphia Music Generator",
-  "Algo Visualizer Next.js",
-  "Bhagavad Gita API",
-  "Sorting Algorithm Visualizer",
-  "Portfolio Website Next.js",
-  "AI Powered Application"
+  "Scent Bite Perfume Shop Management",
+  "Smart Parking System",
+  "Plant Disease Analyzer AI",
+  "GUVI Login Register Profile System",
+  "Portfolio Website"
 ];
 
 const locations = [
   "India",
-  "Delhi",
-  "NCR",
-  "Delhi NCR",
-  "Gurgaon",
-  "Bhubaneswar",
-  "Odisha",
-  "Bangalore",
-  "Remote",
-  "Worldwide"
+  "Tamil Nadu",
+  "Coimbatore",
+  "Remote"
 ];
 
 const longTail = [
-  "Hire Next.js Developer in India",
-  "Best Full Stack Developer Portfolio",
-  "React Developer for startup",
-  "Software Engineer Intern opportunities",
-  "Next.js 15 Portfolio Template",
-  "Generative AI Projects Showcase",
-  "Frontend Developer with AI skills",
-  "Freelance Web Developer India",
-  "Collaborate on Open Source",
-  "Technical Writer and Developer",
-  "Hackathon Winner Portfolio"
+  "MERN Stack Developer Portfolio",
+  "Full Stack Developer Portfolio India",
+  "React Developer Portfolio",
+  "Node.js Developer India",
+  "Web Developer Coimbatore",
+  "Hire MERN Stack Developer",
+  "Student Developer Portfolio",
+  "Frontend Backend Developer Projects"
 ];
 
 export const Keywords = [

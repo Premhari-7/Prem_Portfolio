@@ -36,8 +36,6 @@ export async function POST(request: Request) {
 
     const data = await qevResponse.json();
 
-    console.log("QuickEmailVerification response:", data);
-
     if (data.result !== "valid") {
       return NextResponse.json(
         { error: "Email address is not valid" },
@@ -63,9 +61,9 @@ export async function POST(request: Request) {
   );
 
   const message = {
-    from: `"Aarab Nishchal - Contact Team" <${process.env.email_from}>`,
+    from: `"Prem Hari S - Portfolio Contact" <${process.env.email_from}>`, // ✅ changed
     to: `${senderName} <${senderEmail}>`,
-    subject: "Your message has landed! 🚀 We'll get back to you shortly",
+    subject: "Thanks for reaching out! 🚀",
     html: htmlContent,
     headers: {
       "X-Entity-Ref-ID": "newmail",

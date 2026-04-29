@@ -25,7 +25,6 @@ export const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      // Optimize state updates to avoid unnecessary re-renders
       if (currentScrollY > 100 && !isScrolled) {
         setIsScrolled(true);
       } else if (currentScrollY <= 100 && isScrolled) {
@@ -60,6 +59,7 @@ export const Navbar = () => {
         }`}
       >
         <div className="flex items-center justify-between">
+          {/* Logo + Name */}
           <Link
             href="/"
             className="flex items-center space-x-2 sm:space-x-3 group"
@@ -77,11 +77,11 @@ export const Navbar = () => {
                   width: 40,
                   height: 40,
                 })}`}
-                style={{
-                  objectFit: "cover",
-                }}
+                style={{ objectFit: "cover" }}
               />
             </div>
+
+            {/* ✅ Your Name from selfData */}
             <span
               className={`${quentine.className} text-primary-foreground text-xl sm:text-base`}
             >
@@ -89,6 +89,7 @@ export const Navbar = () => {
             </span>
           </Link>
 
+          {/* Desktop Button */}
           <div className="hidden sm:block">
             <Button
               variant="outline"
@@ -96,32 +97,28 @@ export const Navbar = () => {
               className="border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-200"
             >
               {isResumePage ? (
-                <a href="/docs/Aarab_Nishchal_Resume.pdf" download="Aarab_Nishchal_Resume.pdf">
+                <a
+                  href="/docs/resume.pdf"
+                  download="Prem_Hari_S_Resume.pdf"
+                >
                   Download Resume
                 </a>
               ) : (
-                <Link href="/resume">
-                  Resume
-                </Link>
+                <Link href="/resume">Resume</Link>
               )}
             </Button>
           </div>
 
+          {/* Mobile Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="sm:hidden p-2 rounded-lg hover:bg-muted/50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50"
             aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? (
-              <RiCloseLargeFill
-                size={20}
-                className="transition-transform duration-200"
-              />
+              <RiCloseLargeFill size={20} />
             ) : (
-              <RiMenu4Fill
-                size={20}
-                className="transition-transform duration-200"
-              />
+              <RiMenu4Fill size={20} />
             )}
           </button>
         </div>
@@ -141,8 +138,8 @@ export const Navbar = () => {
               >
                 {isResumePage ? (
                   <a
-                    href="/docs/Aarab_Nishchal_Resume.pdf"
-                    download="Aarab_Nishchal_Resume.pdf"
+                    href="/docs/resume.pdf"
+                    download="Prem_Hari_S_Resume.pdf"
                     onClick={() => setIsMenuOpen(false)}
                     className="flex items-center justify-center"
                   >

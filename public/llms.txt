@@ -1,23 +1,26 @@
-# Aarab Nishchal - Student Developer Portfolio
+# Prem Hari S - Full Stack Developer Portfolio
 
 ## About
-Aarab Nishchal is a Student Developer and Creative Coder based in Bhubaneswar, India. He specializes in Full-Stack Web Development, primarily using the React and Next.js ecosystem.
+Prem Hari S is a Full Stack Developer based in Coimbatore, Tamil Nadu, India. He specializes in building modern web applications using the MERN stack and focuses on creating practical, user-friendly digital solutions.
 
 ## Skills
-- **Languages**: JavaScript, TypeScript, Python, Java, C/C++, SQL
-- **Frameworks**: Next.js, React, Express.js, Tailwind CSS
-- **Tools**: Git, GitHub, Vercel, Firebase, MongoDB
+- **Languages**: JavaScript, TypeScript, Python, PHP, SQL
+- **Frameworks**: React, Next.js, Node.js, Express.js, Tailwind CSS, Bootstrap
+- **Tools**: Git, GitHub, MongoDB, MySQL, VS Code, Postman
 
 ## Projects
-- **Portfolio**: This website, showcasing his work and skills.
-- **Various Open Source Experiments**: Available on GitHub.
+- **Scent Bite**: A perfume shop management system with real-time stock updates, billing, and product management.
+- **Smart Parking System**: A booking-based parking system similar to theater seat selection.
+- **GUVI Auth System**: Login, register, and profile system using MySQL, MongoDB, Redis with strict architecture rules.
+- **Plant Disease Analyzer AI**: AI-based system trained on 10,000+ images to detect plant diseases with chatbot support.
 
 ## Contact
-- **Email**: aarab.nishchal@gmail.com
-- **GitHub**: https://github.com/aarabii
-- **LinkedIn**: https://linkedin.com/in/aarab-nishchal
-- **Twitter**: https://twitter.com/aarab_ii
+- **Email**: haripradeep185@gmail.com
+- **GitHub**: https://github.com/Premhari-7
+- **LinkedIn**: https://www.linkedin.com/in/premhari07
+- **Instagram**: https://www.instagram.com/prem_lynx_25/
+- **LeetCode**: https://leetcode.com/u/Prem_hari/
 
 ## Content Structure
-- `/`: Main landing page with Hero, About, Skills, Experience, Projects, and Contact sections.
-- `/resume`: Direct link to view/download resume.
+- `/`: Main portfolio with Hero, About, Skills, Experience, Projects, and Contact sections.
+- `/resume`: View or download resume.

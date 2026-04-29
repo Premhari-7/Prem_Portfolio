@@ -1,7 +1,9 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://aarab.vercel.app";
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
   const lastModified = new Date();
 
   const sections = [
@@ -29,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/docs/Aarab_Nishchal_Resume.pdf`,
+      url: `${baseUrl}/docs/resume.pdf`, // ✅ fixed
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.6,

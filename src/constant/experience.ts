@@ -1,30 +1,49 @@
 export const experienceData = [
   {
-    role: "Software Development Engineer Intern",
-    year: "Sep'24 - Present",
+    role: "MERN Stack Developer Intern",
+    year: "Apr'26 - May'26",
     description: [
-      "Optimized the platforms code execution engine by analyzing backend bottlenecks in 300+ algorithmic problems; refactored C++/Java logic to reduce average runtime latency by 15%.",
-      "Architected internal automation pipelines to validate problem constraints and test cases, ensuring 99.9% uptime for the problem statement delivery API during high-traffic hackathons.",
-      "Engineered comprehensive test suites for technical assessments, achieving 100% code coverage on edge cases to eliminate false positives in candidate grading."
+      "Built full-stack web applications using React, Node.js, Express, and MongoDB.",
+      "Developed REST APIs and handled database operations efficiently.",
+      "Designed responsive UI for smooth user experience across devices."
     ],
-
-    company: "UnStop",
+    company: "Nxtlogic",
     technologies: [
-      "Inhouse CMS",
-      "Artificial Intelligence",
-      "Code Interpretation",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB"
     ],
-    url: "https://www.unstop.com/",
+    url: "https://www.nxtlogic.com/"
   },
   {
-    role: "Graphic Designer",
-    year: "Nov'23 - Dec'24",
+    role: "Student Volunteer",
+    year: "2025 - 2026 Present",
     description: [
-      "Designed scrollstopping visuals for social media and event promotions, making sure even the algorithm couldn’t ignore our team’s drip.",
-      "Turned vague design briefs into crisp creative assets—because 'make it pop' is not a real instruction but I delivered anyway.",
-      "Blended creativity with speed using Illustrator, Canva, and DaVinci Resolve to bring aesthetic harmony across posters, reels, and everything in between—basically the design department’s Swiss Army knife.",
+      "Completed 20+ physical verification activities ensuring data accuracy.",
+      "Supported field-level operations and community initiatives.",
+      "Improved teamwork and communication skills through real-world experience."
     ],
-    company: "Team Negative (Team under KIIT-DU Fashion Society)",
-    technologies: ["Adobe Illustrator", "Canva", "daVinci Resolve"],
+    company: "Maatram Foundation",
+    technologies: [
+      "Decision making",
+      "Communication",
+      "Field Verification"
+    ]
   },
+  {
+    role: "B.Sc Computer Technology Student",
+    year: "2024 - 2027 Present",
+    description: [
+      "Pursuing undergraduate studies focused on full-stack development and UI/UX design.",
+      "Built projects like Scent Bite, Smart Parking System, and LMS platform.",
+      "Continuously learning MERN stack and modern web technologies."
+    ],
+    company: "Sri Krishna Arts and Science College",
+    technologies: [
+      "Programming",
+      "Web Development",
+      "UI/UX"
+    ]
+  }
 ];

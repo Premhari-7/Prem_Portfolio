@@ -3,30 +3,30 @@ import { resumeKeywords } from "@/constant";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Resume - Aarab Nishchal",
+  title: "Resume - Prem Hari S",
   description:
-    "View and download Aarab Nishchal's professional resume. Student developer with expertise in React, Next.js, and full-stack development.",
+    "View and download Prem Hari S's professional resume. Full Stack Developer with expertise in MERN stack and modern web development.",
   keywords: resumeKeywords,
   openGraph: {
-    title: "Resume - Aarab Nishchal",
+    title: "Resume - Prem Hari S",
     description:
-      "View and download Aarab Nishchal's professional resume featuring his experience and skills as a student developer.",
-    url: "https://aarab.vercel.app/resume",
-    siteName: "Aarab Nishchal",
+      "View and download Prem Hari S's professional resume featuring experience and skills in full-stack development.",
+    url: "http://localhost:3000/resume",
+    siteName: "Prem Hari S",
     images: [
       {
         url: "/images/thumbnail.png",
         width: 1200,
         height: 630,
-        alt: "Aarab Nishchal Resume",
+        alt: "Prem Hari S Resume",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Resume - Aarab Nishchal",
+    title: "Resume - Prem Hari S",
     description:
-      "View Aarab Nishchal's professional resume and experience as a student developer.",
+      "View Prem Hari S's professional resume and experience as a full-stack developer.",
     images: ["/images/thumbnail.png"],
   },
 };
@@ -42,7 +42,7 @@ export default function ResumeLayout({
     <>
       <link
         rel="preload"
-        href="/docs/Aarab_Nishchal_Resume.pdf"
+        href="/docs/resume.pdf"   // ✅ fixed path
         as="fetch"
         type="application/pdf"
         crossOrigin="anonymous"

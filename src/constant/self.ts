@@ -1,46 +1,53 @@
 export const selfData = {
-  name: "Aarab Nishchal",
-  first_name: "Aarab",
-  last_name: "Nishchal",
-  jobTitle: "Student Developer",
-  workFor: "KIIT University",
+  name: "Prem Hari S",
+  first_name: "Prem",
+  last_name: "Hari S",
+
+  jobTitle: "Full Stack Developer | UI/UX Designer | MERN Stack Developer",
+  workFor: "B.Sc Computer Technology - Sri Krishna Arts and Science College, Coimbatore",
+
   current_location: {
-    city: "Bhubaneswar",
-    state: "Odisha",
+    city: "Coimbatore",
+    state: "Tamil Nadu",
     country: "India",
   },
+
   DOB: {
-    dd: 9,
-    mm: 8,
-    yyyy: 2004,
+    dd: 25,
+    mm: 11,
+    yyyy: 2006,
   },
-  email: "aarab.nishchal@gmail.com",
+
+  email: "haripradeep185@gmail.com",
+
   roles: [
-    "Chief Problem Solver",
-    "Idea Mechanic",
-    "Possibility Pilot",
-    "Chaos Coordinator",
-    "Chief Tinkerer",
-    "Glitch Gladiator",
-    "Solution Sorcerer",
-    "Joyful Juggler",
-  ],
-  desc: "I design and build tools that live on the internet.",
-  bio: "I'm a student developer passionate about crafting digital experiences. I love building intuitive web apps, exploring new technologies, and turning creative ideas into accessible tools.",
-  about: [
-    "Hi, I'm a student developer who likes breaking things just to figure out how to fix them usually with JavaScript and snacks. I build web apps that try their best to work on the first try (no promises though).",
-    "React and Tailwind are my daily tools, and I'm currently exploring the mysterious land of backend development where bugs go to multiply. Full-stack dreams, coffee-fueled nights, and lots of console.log.",
-    "When I'm not coding, I'm either daydreaming startup ideas, lurking on GitHub, or explaining to my friends why 'it works on my machine' is totally valid. I love creating stuff that’s fun, functional, and maybe a little chaotic.",
+    "Full Stack Developer",
+    "UI/UX Designer",
+    "MERN Stack Developer",
+    "Problem Solver",
+    "Creative Thinker",
+    "Web App Builder",
   ],
 
+  desc: "I design and build modern web applications with clean UI, real-world functionality, and scalable architecture.",
+
+  bio: "I'm a developer driven by curiosity and the urge to build things that actually work in the real world. I enjoy transforming ideas into functional web applications, balancing clean design with solid backend logic. Most of my time goes into experimenting, debugging, and refining small details that make a big difference in user experience. Always learning, always building, and always trying to make things a little better than before.",
+
+  about: [
+  "Hi, I'm Prem — a student developer who enjoys breaking things just to understand how they work (and somehow fixing them later). Most of my time goes into building web apps, experimenting with ideas, and occasionally fighting bugs that refuse to leave.",
+
+  "React and Tailwind are my daily tools, and I’m currently exploring the backend world where things get a little more unpredictable. Full-stack goals, late-night coding sessions, and lots of console.log moments are part of the routine.",
+
+  "When I’m not coding, I’m either thinking about new ideas, scrolling through GitHub, or explaining why 'it works on my machine' should count as a valid reason. I like building things that are simple, useful, and just a little bit creative."
+],
+
   socials_username: {
-    facebook: "zzcwc",
-    github: "aarabii",
-    instagram: "aarab.ii",
-    leetcode: "aarabii",
-    linkedin: "aarab-nishchal",
-    snapchat: "aarab.ii",
-    telegram: "aarab_ii",
-    twitter: "aarab_ii",
+    github: "Premhari-7",
+    instagram: "prem_lynx_25",
+    leetcode: "Prem_hari",
+    linkedin: "premhari07",
+    telegram: "pradeep_hari",
+    facebook: "",
+    snapchat: "",
   },
 };

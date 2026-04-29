@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 import { SiLeetcode } from "react-icons/si";
 import { PiTelegramLogo } from "react-icons/pi";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn,  } from "react-icons/fa6";
 
 import { selfData } from "@/constant";
 
@@ -25,11 +25,7 @@ export const ContactSocials = () => {
       link: `https://t.me/${selfData.socials_username.telegram}`,
       initial: -10,
     },
-    {
-      Icon: FaTwitter,
-      link: `https://twitter.com/${selfData.socials_username.twitter}`,
-      initial: 10,
-    },
+   
     {
       Icon: SiLeetcode,
       link: `https://leetcode.com/${selfData.socials_username.leetcode}`,

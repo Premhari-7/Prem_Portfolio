@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { TbHeart, TbHeartFilled } from "react-icons/tb";
-import { LuGithub, LuLinkedin, LuTwitter, LuMail } from "react-icons/lu";
+import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu"; // ❌ Twitter removed
 
 import { quentine } from "@/app/fonts";
 import { selfData } from "@/constant/";
@@ -33,12 +33,12 @@ export const Footer = () => {
       href: `https://linkedin.com/in/${selfData.socials_username.linkedin}`,
       label: "LinkedIn",
     },
+    // ❌ Twitter removed here
     {
-      icon: LuTwitter,
-      href: `https://twitter.com/${selfData.socials_username.twitter}`,
-      label: "Twitter",
+      icon: LuMail,
+      href: `mailto:${selfData.email}`,
+      label: "Email",
     },
-    { icon: LuMail, href: `mailto:${selfData.email}`, label: "Email" },
   ];
 
   return (
@@ -95,7 +95,7 @@ export const Footer = () => {
             <h3
               className={`${quentine.className} text-2xl font-semibold text-primary`}
             >
-              Aarab Nishchal
+              Prem Hari S
             </h3>
           </div>
 
@@ -118,7 +118,7 @@ export const Footer = () => {
         <div className="text-xs text-center text-muted-foreground space-y-2">
           <p className="flex items-center justify-center gap-2">
             Made with
-            <button onClick={toggleHeart} className="text-primary" aria-label="Toggle heart">
+            <button onClick={toggleHeart} className="text-primary">
               {isHeartFilled ? <TbHeartFilled /> : <TbHeart />}
             </button>
             by
@@ -126,7 +126,7 @@ export const Footer = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="text-primary/80 hover:text-primary"
             >
-              Aarab Nishchal
+              Prem Hari S
             </button>
           </p>
           <span>Licensed under MIT</span>

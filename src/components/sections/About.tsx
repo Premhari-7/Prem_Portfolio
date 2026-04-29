@@ -47,7 +47,7 @@ export const About = () => {
               }}
             >
               <div
-                className="w-full max-w-md h-80 rounded-2xl overflow-hidden relative  border-2 group/image"
+                className="w-full max-w-md h-[420px] rounded-2xl overflow-hidden relative border-2 group/image"
                 style={{ borderColor: "hsl(var(--glass-border))" }}
               >
                 <motion.div
@@ -58,12 +58,12 @@ export const About = () => {
                   className="relative w-full h-full"
                 >
                   <Image
-                    src="/images/me.png"
+                    src="/images/me.png.jpeg"
                     alt="Profile Picture"
                     fill
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, 448px"
-                    className="object-cover transition-all duration-700 ease-in-out filter grayscale group-hover/image:grayscale-0 group-hover/image:scale-105"
+                    className="object-cover object-top transition-all duration-700 ease-in-out filter grayscale group-hover/image:grayscale-0 group-hover/image:scale-105"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 opacity-0 group-hover/image:opacity-100 transition-opacity duration-700" />
